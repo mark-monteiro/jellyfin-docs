@@ -21,10 +21,12 @@ Jellyfin is a maze of clients, plugins, and other useful projects. These source 
 6.  Emby.Notifications:
 7.  Emby.Photos:
 8.  Emby.Server.Implementations:
+    - This is the shared server project containing non-platform-specific code and is compiled against `netstandard`.
     - ScheduledTasks: `all scheduled tasks can be found here`
 9.  Jellyfin.Api:
 10. Jellyfin.Drawing.Skia:
 11. Jellyfin.Server:
+    - This is the main server project containing platform-specific code, things that require `netcoreapp`, and setup.
 12. MediaBrowser.Api:
     - Playback:
       - BaseStreamingService.cs: `receives client information and reads media info and feeds this info to MediaInfoService`
